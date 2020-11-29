@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from '../components/Layout'
+import {ExampleButton} from '../components/button'
 
 
 export default function Home() {
   return <Layout>
-
-  
-  Hello world!</Layout>
+<h1>Hello World</h1>
+  <ExampleButton>Click Me</ExampleButton>
+ </Layout>
 }
