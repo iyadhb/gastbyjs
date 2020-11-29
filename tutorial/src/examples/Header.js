@@ -1,29 +1,32 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import {useStaticQuery, graphql} from 'gatsby'
 
-const ComponentName = () => {
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          author
-          data
-          description
-          person {
-            age
-            name
-          }
-          title
-        }
+const getData = graphql`
+{
+  site {
+    siteMetadata {
+      author
+      data
+      description
+      person {
+        age
+        name
       }
+      title
     }
-  `)
-  return (
-   <div>
-  <h1>Hello my name is {data.site.siteMetadata.person.name } I am {data.site.siteMetadata.person.age} years old
-  </h1>
+  }
+}
+`
+const Header = () => {
+ const {site:{siteMetadata:{title,person:{name}}}} = useStaticQuery(getData)
+ return (
+  <div>
+   {/* <h1>title: {data.site.siteMetadata.title}</h1>
+ <h1>name: {data.site.siteMetadata.person.name}</h1> */}
+ <h1>Title : {title}</h1>
+ <h1>Name : {name}</h1>
   </div>
-  )
+ )
 }
 
-export default ComponentName
+export default Header
