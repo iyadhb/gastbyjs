@@ -1,10 +1,10 @@
 import React from "react"
-import NavBar from "../components/NavBar"
-import Navbar from '../components/NavBar'
+import Layout from '../components/Layout'
+
 
 export default function Home() {
-  return <div>
-  <NavBar />
+  return <Layout>
+
   
-  Hello world!</div>
+  Hello world!</Layout>
 }
