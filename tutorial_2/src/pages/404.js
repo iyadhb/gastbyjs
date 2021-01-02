@@ -8,4 +8,4 @@ const error = () => {
     )
 }
 
-export defaulerror
+export default error
