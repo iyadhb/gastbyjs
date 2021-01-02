@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 const error = () => {
     return (
-        <div>
+        <Layout>
             <h1>This is our Error page</h1>
-        </div>
+        </Layout>
     )
 }
 
